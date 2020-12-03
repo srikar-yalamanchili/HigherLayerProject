@@ -15,8 +15,9 @@
     "tslint": "^6.1.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run tsc && node --inspect build/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",   
+    "devStart": "npm run tsc && node --inspect build/app.js",
+    "start": "node build/app.js",
     "tsc": "tsc"
   },
   "author": "Srikar",
