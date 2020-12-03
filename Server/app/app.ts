@@ -1,11 +1,11 @@
 import express from "express";
 
 var app = express();
-var PORT = 5000;
+var PORT = 3000;
 var server = app.listen(PORT);
 var io = require('socket.io')(server , {
     cors: {
-      origin: "http://localhost:3000",
+      origin: "http://localhost:5000",
       methods: ["GET", "POST"],
       credentials: true
     }
@@ -63,7 +63,7 @@ let auctionObjects = {} as AuctionObject
 
 app.use(
     cors({
-      origin: 'http://localhost:3000',
+      origin: 'http://localhost:5000',
       credentials: true,
     })
  );
