@@ -4,14 +4,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = __importDefault(require("express"));
-// import http from 'http';
-// import socket.io from 'socket.io';
 var app = express_1.default();
-var PORT = 5000;
+var PORT = process.env.port || 3000;
 var server = app.listen(PORT);
 var io = require('socket.io')(server, {
     cors: {
-        origin: "http://localhost:3000",
+        origin: "http://localhost:5000",
         methods: ["GET", "POST"],
         credentials: true
     }
@@ -28,7 +26,7 @@ var counter = 1;
 var clients = [];
 var auctionObjects = {};
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'http://localhost:5000',
     credentials: true,
 }));
 app.use(express_1.default.json());
