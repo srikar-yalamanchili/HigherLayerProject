@@ -4,10 +4,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = __importDefault(require("express"));
-// import http from 'http';
-// import socket.io from 'socket.io';
 var app = express_1.default();
-var PORT = 5000;
+var PORT = process.env.port || 5000;
 var server = app.listen(PORT);
 var io = require('socket.io')(server, {
     cors: {
