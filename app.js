@@ -9,7 +9,7 @@ var PORT = process.env.port || 8080;
 var server = app.listen(PORT);
 var io = require('socket.io')(server, {
     cors: {
-        origin: "http://localhost:5000",
+        origin: "http://localhost:3000",
         methods: ["GET", "POST"],
         credentials: true
     }
@@ -26,7 +26,7 @@ var counter = 1;
 var clients = [];
 var auctionObjects = {};
 app.use(cors({
-    origin: 'http://localhost:5000',
+    origin: 'http://localhost:3000',
     credentials: true,
 }));
 app.use(express_1.default.json());
