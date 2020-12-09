@@ -9,7 +9,7 @@ var PORT = process.env.port || 8080;
 var server = app.listen(PORT);
 var io = require('socket.io')(server, {
     cors: {
-        origin: "http://localhost:3000",
+        origin: "https://main.d3hwsv71nacj4e.amplifyapp.com",
         methods: ["GET", "POST"],
         credentials: true
     }
@@ -21,12 +21,12 @@ io.on('connection', function (socket) {
     });
 });
 var cors = require('cors');
-var auctionDuaration = 60000;
+var auctionDuaration = 300000;
 var counter = 1;
 var clients = [];
 var auctionObjects = {};
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://main.d3hwsv71nacj4e.amplifyapp.com/',
     credentials: true,
 }));
 app.use(express_1.default.json());
