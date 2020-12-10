@@ -12,7 +12,7 @@ var io = require('socket.io')(server, {
         origin: "https://main.d3hwsv71nacj4e.amplifyapp.com",
         methods: ["GET", "POST"],
         credentials: true
-    }
+    } 
 });
 io.on('connection', function (socket) {
     console.log('A new user has connected');
