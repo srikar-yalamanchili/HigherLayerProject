@@ -26,7 +26,7 @@ var counter = 1;
 var clients = [];
 var auctionObjects = {};
 app.use(cors({
-    origin: 'https://main.d3hwsv71nacj4e.amplifyapp.com/',
+    origin: 'https://main.d3hwsv71nacj4e.amplifyapp.com',
     credentials: true,
 }));
 app.use(express_1.default.json());
