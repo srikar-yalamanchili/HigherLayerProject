@@ -14,7 +14,7 @@ var io = require('socket.io')(server, {
         credentials: true
     } 
 });
-io.on('connection', function (socket) {
+io.on('connection', function (socket) { 
     console.log('A new user has connected');
     socket.on('disconnect', function () {
         console.log('A user has disconnected');
